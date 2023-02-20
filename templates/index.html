@@ -67,7 +67,7 @@
     <h1>Doctor Fee Prediction</h1>
 
     {% if result %}
-        <p class="result">Fee should be: {{ round(result) }}</p>
+        <p class="result">Doctor's Predicted Fee Should Be:- {{ result }}</p>
     {% endif %}
 
     <form method="post" action="/predict">
