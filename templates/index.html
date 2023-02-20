@@ -27,12 +27,17 @@
             margin-bottom: 10px;
         }
 
-        input[type="text"] {
+        input[type="text"], select {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        select {
+            height: 40px;
         }
 
         input[type="submit"] {
@@ -42,6 +47,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 20px;
         }
 
         input[type="submit"]:hover {
@@ -72,14 +78,50 @@
         <input type="text" name="NPV Value">
 
         <label>City</label>
-        <input type="text" name="City">
+        <select id="menu" name="menu" required>
+            <option value="">-- Select an City --</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Mumbai">Mumbai</option>
+        </select>
 
         <label>Years of Experience</label>
         <input type="text" name="Years of Experience">
 
         <label>Speciality</label>
-        <input type="text" name="Speciality">
-
+        <select id="speciality" name="speciality" required>
+			<option value="">-- Select an speciality --</option>
+			<option value="Ayurveda">Ayurveda</option>
+			<option value="Bariatric Surgeon">Bariatric Surgeon</option>
+			<option value="Cardiologist">Cardiologist</option>
+			<option value="Dentist">Dentist</option>
+			<option value="Dermatologist">Dermatologist</option>
+			<option value="Dietitian">Dietitian</option>
+			<option value="Endodontist">Endodontist</option>
+			<option value="Gastroenterologist">Gastroenterologist</option>
+			<option value="General Surgeon">General Surgeon</option>
+			<option value="Gynecologist">Gynecologist</option>
+			<option value="Homoeopath">Homoeopath</option>
+			<option value="Infertility Specialist">Infertility Specialist</option>
+			<option value="Internal Medicine">Internal Medicine</option>
+			<option value="Neurologist">Neurologist</option>
+			<option value="Obstetrician">Obstetrician</option>
+			<option value="Oncologist">Oncologist</option>
+			<option value="Ophthalmologist">Ophthalmologist</option>
+			<option value="Orthopedist">Orthopedist</option>
+			<option value="Otorhinolaryngologist">Otorhinolaryngologist</option>
+			<option value="Pain Specialist">Pain Specialist</option>
+			<option value="Pediatrician">Pediatrician</option>
+			<option value="Periodontist">Periodontist</option>
+			<option value="Physiotherapist">Physiotherapist</option>
+			<option value="Prosthodontist">Prosthodontist</option>
+			<option value="Psychiatrist">Psychiatrist</option>
+			<option value="Pulmonologist">Pulmonologist</option>
+			<option value="Radiologist">Radiologist</option>
+			<option value="Rheumatologist">Rheumatologist</option>
+			<option value="Therapist">Therapist</option>
+			<option value="Urologist">Urologist</option>
+        </select>
         <label>Degree_no</label>
         <input type="text" name="Degree_no">
 

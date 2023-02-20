@@ -1,6 +1,10 @@
 from flask import Flask,render_template,request
 import pickle
 import numpy as np
+import pandas as pd
+
+df=pd.read_csv('doctor clean data.csv')
+print(df.columns)
 
 modal=pickle.load(open('pipe.pkl','rb'))
 
@@ -8,7 +12,8 @@ app=Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    City=sorted(df.City.unique())
+    return render_template('index.html',City=City)
 
 @app.route('/predict',methods=['post'])
 
