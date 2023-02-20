@@ -3,37 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>Doctor Fee Prediction</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        form {
+            margin: 0 auto;
+            max-width: 500px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p.result {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
     <h1>Doctor Fee Prediction</h1>
+
     {% if result %}
-        <p>{{ result }}</p>
+        <p class="result">Fee should be: {{ result }}</p>
     {% endif %}
 
     <form method="post" action="/predict">
-        <label>DP Score</label><br>
-        <input type="text" name="DP Score"><br><br>
+        <label>DP Score</label>
+        <input type="text" name="DP Score">
 
-        <label>NPV Value</label><br>
-        <input type="text" name="NPV Value"><br><br>
+        <label>NPV Value</label>
+        <input type="text" name="NPV Value">
 
-        <label>City</label><br>
-        <input type="text" name="City"><br><br>
+        <label>City</label>
+        <input type="text" name="City">
 
-        <label>Years of Experience</label><br>
-        <input type="text" name="Years of Experience"><br><br>
+        <label>Years of Experience</label>
+        <input type="text" name="Years of Experience">
 
-        <label>Speciality</label><br>
-        <input type="text" name="Speciality"><br><br>
+        <label>Speciality</label>
+        <input type="text" name="Speciality">
 
-        <label>Degree_no</label><br>
-        <input type="text" name="Degree_no"><br><br>
+        <label>Degree_no</label>
+        <input type="text" name="Degree_no">
 
-        <label>Degree_1</label><br>
-        <input type="text" name="Degree_1"><br><br> 
+        <label>Degree_1</label>
+        <input type="text" name="Degree_1"> 
 
-        <input type="submit" value="Predict"><br><br>
+        <input type="submit" value="Predict">
     </form>
 
 </body>

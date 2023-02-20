@@ -21,9 +21,9 @@ def predict_fee():
    Degree_no=int(request.form.get('Degree_no'))
    Degree_1=request.form.get('Degree_1')
 
-   result=modal.predict(np.array([DP_Score,NPV_Value,City,Years_of_Experience,Speciality,Degree_no,Degree_1]).reshape(1,7))
+   result=modal.predict(np.array([DP_Score,NPV_Value,City,Years_of_Experience,Speciality,Degree_no,Degree_1]).reshape(1,7))[0]
 
-   return str(result[0])
+   return render_template('index.html',result=result)
 
 if __name__=='__main__':
     app.run(host='0.0.0.0',port=8080)
